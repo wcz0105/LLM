@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM UI 原型生成器 - 论文复现</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LLM UI 原型生成器</h1>
+            <p>基于《Prompting UI Prototypes from Text》论文实现</p>
+        </header>
+
+        <div class="main-content">
+            <div class="strategy-section">
+                <h2>提示策略</h2>
+                <div class="strategy-controls">
+                    <select id="strategy-select">
+                        <option value="">加载策略...</option>
+                    </select>
+                    <button id="new-strategy-btn">新建策略</button>
+                    <button id="edit-strategy-btn">编辑策略</button>
+                </div>
+
+                <div class="strategy-details">
+                    <h3 id="strategy-name">未选择策略</h3>
+                    <div class="dimension">
+                        <h4>抽象级别</h4>
+                        <p id="abstraction-level">-</p>
+                    </div>
+                    <div class="dimension">
+                        <h4>角色</h4>
+                        <p id="role">-</p>
+                    </div>
+                    <div class="dimension">
+                        <h4>格式</h4>
+                        <p id="format">-</p>
+                    </div>
+                    <div class="dimension">
+                        <h4>附加要求</h4>
+                        <p id="additional-requirements">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <h2>组件描述</h2>
+                <textarea
+                    id="description"
+                    placeholder="描述你想要生成的UI组件，例如：'一个带有标签的滑动条，范围0-100'"
+                    rows="4"></textarea>
+                <button id="generate-btn">生成组件</button>
+            </div>
+
+            <div class="result-section">
+                <h2>生成的组件</h2>
+                <div id="component-preview" class="component-preview">
+                    <div class="empty-state">生成的组件将显示在这里</div>
+                </div>
+                <div class="result-actions">
+                    <button id="preview-btn" disabled>在新窗口预览</button>
+                    <button id="history-btn">查看历史记录</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-info">
+            <h3>论文信息</h3>
+            <p><strong>标题：</strong>Prompting UI Prototypes from Text: Comparing Designers' Prompting Strategies with LLM Responses</p>
+            <p><strong>作者：</strong>Smith, J., Johnson, A., & Williams, B.</p>
+            <p><strong>摘要：</strong>本文探讨了设计师如何通过提示词让LLM生成UI原型，比较了设计师的提示策略与LLM的响应，提出了一个包含三个维度（抽象级别、角色、格式）的框架。</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

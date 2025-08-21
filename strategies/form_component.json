@@ -1,0 +1,8 @@
+{
+    "name": "表单组件策略",
+    "abstraction_level": "低抽象（具体实现细节）",
+    "role": "前端开发工程师",
+    "format": "输出完整的HTML表单代码片段，包含必要的内联CSS和JavaScript，确保表单元素有适当的标签和占位符文本。",
+    "prompt_prefix": "创建一个表单组件，包含",
+    "additional_requirements": "确保表单元素具有响应式设计，在移动设备上表现良好。提供表单验证和用户反馈。"
+}

@@ -1,0 +1,8 @@
+{
+    "name": "基础UI组件策略",
+    "abstraction_level": "中抽象（功能描述）",
+    "role": "资深UI设计师",
+    "format": "只输出HTML代码片段，包含必要的内联CSS和JavaScript，不要包含任何解释性文字。",
+    "prompt_prefix": "生成一个",
+    "additional_requirements": "使用现代设计风格，确保组件简洁美观，提供基本的视觉反馈。"
+}

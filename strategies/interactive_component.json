@@ -1,0 +1,8 @@
+{
+    "name": "交互式组件策略",
+    "abstraction_level": "高抽象（概念性描述）",
+    "role": "交互设计师",
+    "format": "输出HTML代码片段，包含CSS和JavaScript，实现所需的交互效果。",
+    "prompt_prefix": "设计一个交互式组件，能够",
+    "additional_requirements": "使用现代动画和过渡效果，提供即时的用户反馈，确保组件在各种屏幕尺寸上表现一致。"
+}

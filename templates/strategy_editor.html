@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提示策略编辑器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style>
+        .strategy-form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>提示策略编辑器</h1>
+            <p>根据论文框架设计您的提示策略</p>
+        </header>
+
+        <div class="strategy-form">
+            <div class="form-group">
+                <label for="strategy-name">策略名称</label>
+                <input type="text" id="strategy-name" placeholder="例如：基础表单组件策略">
+            </div>
+
+            <div class="form-group">
+                <label for="abstraction-level">抽象级别</label>
+                <select id="abstraction-level">
+                    <option value="高抽象（概念性描述）">高抽象（概念性描述）</option>
+                    <option value="中抽象（功能描述）">中抽象（功能描述）</option>
+                    <option value="低抽象（具体实现细节）">低抽象（具体实现细节）</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="role">角色</label>
+                <input type="text" id="role" placeholder="例如：资深UI/UX设计师">
+            </div>
+
+            <div class="form-group">
+                <label for="format">输出格式</label>
+                <textarea id="format" placeholder="例如：只输出HTML代码片段，包含必要的内联CSS和JavaScript，不要包含任何解释性文字。"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="prompt-prefix">提示前缀</label>
+                <textarea id="prompt-prefix" placeholder="例如：生成一个"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="additional-requirements">附加要求</label>
+                <textarea id="additional-requirements" placeholder="例如：使用现代设计风格，确保组件响应式，提供适当的视觉反馈。"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button id="cancel-btn">取消</button>
+                <button id="save-strategy-btn">保存策略</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/strategy_editor.js') }}"></script>
+</body>
+</html>
